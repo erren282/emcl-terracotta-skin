@@ -32,12 +32,11 @@ local `/csl/` source and uploads the player's chosen skin and cape.
 | File | SHA-512 |
 | --- | --- |
 | `terracotta/terracotta-0.4.2-skin.3-windows-x86_64-pkg.tar.gz` | `f73a2987785079cb319deb540b88ac9199385b4ae2186943d1d35f3afbe9b7f3c90e804afbd7e07f4ff07ae572c82b8e047575c063ce497491d3da467cde44cc` |
-| `terracotta/terracotta-0.4.2-skin.2-windows-x86_64-pkg.tar.gz` | `21fed78d05360145f4821cd6383da19d1b8c90dad4e9d77697023b9af6f528f61c827c679ae24a63c24669ddc2246f0f8f4a992124aa76a6edc0fe9b5f4a7d13` |
 
-Both packages are flat `tar.gz` archives; the launcher only extracts the files the
+The package is a flat `tar.gz` archive; the launcher only extracts the files the
 manifest names.
 
-`0.4.2-skin.3` contains:
+It contains:
 
 - `terracotta-0.4.2-skin.3-windows-x86_64.exe` — `9d758e12585fd5f35ee3a5e5bef60afd80444bb9cbb20a11f45f33b0a5e1c13fd230e7e56226d3f31aae8dfdb165bae01ecb99156e4c2b11efedab0a9af1be24`
 
@@ -45,11 +44,6 @@ It is built with the `x86_64-pc-windows-gnu` target and links only the Universal
 (`api-ms-win-crt-*`), which Windows 10 and later provide, so it ships without
 `VCRUNTIME140.DLL`. Windows 10 is already the baseline the launcher enforces for
 multiplayer.
-
-`0.4.2-skin.2` (previous release) contains:
-
-- `terracotta-0.4.2-skin.2-windows-x86_64.exe`
-- `VCRUNTIME140.DLL`
 
 ## Download sources
 
@@ -76,4 +70,6 @@ downloads and installs this kernel automatically when Terracotta is first opened
 - The official `terracotta-update` plugin compares numeric versions only, so it treats
   `0.4.2-skin.3` as `0.4.2`; installing an official 0.4.3 through that plugin would
   replace this kernel until it is re-selected.
+- Only the current release is published. The previous `0.4.2-skin.2` package has been
+  removed; a launcher that still pins it will fail to download and should be updated.
 - Upstream project: [burningtnt/Terracotta](https://github.com/burningtnt/Terracotta).
